@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .loader-wrapper{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./src/assets/auto-avenue (2).png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Avenue</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="loader-wrapper">
+        <div class="loader">
+          <img src="/src/assets/loader.gif">
+        </div>
+      </div>
+    </div>
+    <script>
+      const loaderDelay = 10000;
+
+      // Function to load the main components
+      const loadMainComponents = () => {
+        const loaderWrapper = document.querySelector('.loader-wrapper');
+        const rootDiv = document.getElementById('root');
+        
+        // Remove the loader wrapper
+        rootDiv.removeChild(loaderWrapper);
+
+        // Load the main components
+        const mainScript = document.createElement('script');
+        mainScript.type = 'module';
+        mainScript.src = '/src/main.jsx';
+        rootDiv.appendChild(mainScript);
+      };
+
+      // Wait for the specified delay and load the main components
+      setTimeout(loadMainComponents, loaderDelay);
+    </script>
+  </body>
+</html>

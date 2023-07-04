@@ -1,0 +1,313 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.hero {
+  width: 100%;
+  max-width: fit-content;
+}
+
+.slider-one,
+.slider-two,
+.slider-three,
+.slider-four,
+.slider-five {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: slider-one 12s linear infinite;
+
+  .slider-one-image,
+  .slider-two-image,
+  .slider-three-image,
+  .slider-four-image, 
+  .slider-five-image{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/4539381.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* animation: zoom-out 3s linear infinite; */
+    overflow: hidden;
+    .slider-text {
+      position: absolute;
+      top: 40%;
+      left: 5%;
+      color: #ffffff;
+      width: 600px;
+      text-transform: capitalize;
+      animation: text-up 12s linear infinite;
+      transform: translateY(100px);
+      animation-delay: 0s;
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+.slider-two {
+  animation: slider-two 12s linear infinite;
+
+  .slider-two-image {
+    background-image: url("../../assets/05.webp");
+    .slider-text {
+      animation-delay: 3s;
+    }
+  }
+}
+
+.slider-three {
+  animation: slider-three 12s linear infinite;
+
+  .slider-three-image {
+    background-image: url("../../assets/black-mercedes-benz-amg-gt-5k-bq-1336x768.jpg");
+
+    .slider-text {
+      animation-delay: 6s;
+    }
+  }
+}
+
+.slider-four {
+  animation: slider-four 12s linear infinite;
+
+  .slider-four-image {
+    background-image: url("../../assets/pexels-maria-geller-2127039.jpg");
+
+    .slider-text {
+      animation-delay: 9s;
+    }
+  }
+}
+
+.slider-five {
+  animation: slider-five 12s linear infinite;
+
+  .slider-five-image {
+    background-image: url("../../assets/4539395.jpg");
+
+    .slider-text {
+      animation-delay: 12s;
+    }
+  }
+}
+
+
+.carousel-controllers {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.prev-button {
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    position: absolute;
+    top: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    box-shadow: 1px 0 20px rgba(0,0,0,.3);
+    z-index: 9;
+    left: 60px;
+    transform: rotate(-180deg);
+}
+
+.next-button{
+    right: 60px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    position: absolute;
+    top: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    box-shadow: 1px 0 20px rgba(0,0,0,.3);
+    z-index: 9;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  color: #fff;
+}
+
+
+
+@keyframes text-up {
+  10% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes zoom-out {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slider-one {
+  0% {
+    visibility: visible;
+  }
+
+  25% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  75% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes slider-two {
+  0% {
+    visibility: hidden;
+  }
+
+  25% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: visible;
+  }
+
+  75% {.logo-carousel-container {
+    margin-top: 210%;
+  }
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes slider-three {
+  0% {
+    visibility: hidden;
+  }
+
+  25% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  75% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes slider-four {
+  0% {
+    visibility: hidden;
+  }
+
+  25% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  75% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes slider-five {
+  0% {
+    visibility: hidden;
+  }
+
+  25% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  75% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+/*--- Responsiveness ---*/
+@media (max-width: 768px) {
+  .prev-button{
+    visibility: hidden;
+  }
+  .next-button{
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+    .prev-button{
+      visibility: hidden;
+    }
+    .next-button{
+      visibility: hidden;
+    }
+  }
+
+  
+
+
+
+/*---Pagination---*/
